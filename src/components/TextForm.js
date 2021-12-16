@@ -35,14 +35,14 @@ export default function TextForm(props) {
          <div className="mb-3">
          <textarea className="form-control" id="myBox" rows="8" value={text} onChange={handleOnChange}></textarea>
         </div> 
-          <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Uppercase</button>
-          <button className="btn btn-primary mx-1" onClick={handleLowClick}>Convert to Lowercase</button>
-          <button className="btn btn-primary mx-1" onClick={handleClearCick}>Clear Text</button>
-          <button className="btn btn-primary mx-1" onClick={handleCopyClick}>Copy Text</button> 
+          <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+          <button className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>Convert to Lowercase</button>
+          <button className="btn btn-primary mx-1 my-1" onClick={handleClearCick}>Clear Text</button>
+          <button className="btn btn-primary mx-1 my-1" onClick={handleCopyClick}>Copy Text</button> 
         </div>
         <div className="container my-3">
           <h1>Your Text Summary</h1>
-          <p>{text.split(" ").length} words and {text.length} Characters</p>
+          <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} Characters</p>
         </div>
         <div className="container">
           <h2>Preview</h2>
