@@ -1,15 +1,19 @@
 
 import './App.css';
-import Navbar from './components/Navbar';
-import TextForm from './components/TextForm';
+// import Alert from './components/Alert';
+ import About from './components/About';
+ import Navbar from './components/Navbar';
+ import TextForm from './components/TextForm';
 
 function App() {
   return (
     <>
       <Navbar  title ="TextUtils" about="About Us"/>
-      <div className='container'>
-      <TextForm/>
-      </div>
+      {/* <Alert alert="bfjd,nc"/> */}
+      <div className='container my-3'>
+      <TextForm heading="Enter the Text Analyze below"/>
+      </div> 
+      <About/> 
 </>
   );
 }
